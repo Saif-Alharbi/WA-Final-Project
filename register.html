@@ -19,11 +19,27 @@
             </div>
             <div class="header-right">
                 <ul>
-                    <li class="list"><label class="disabled-text">REGISTER</label></li>
+                    <li class="list"><label class="disabled-text" title="You are in the registeration page">REGISTER</label></li>
                     <li class="list"><a href="login.html" class="header-text">LOGIN</a></li>
                 </ul>
             </div>
         </nav>
+        <div class="reg-page">
+            <form class="reg-form">
+                <!-- FullName / UserName / Email / Password / Confirm Password -->
+                <h1>Registration form</h1>
+                <input type="text" class="input-field" id="fullName" title="Full name" placeholder="Enter Full name" required autofocus>
+                <input type="text" class="input-field" id="userName" title="Username" placeholder="Enter Username" required>
+                <input type="email" class="input-field" id="email" title="Email" placeholder="Enter Email" required>
+                <input type="Password" class="input-field" id="password" title="Password" placeholder="Enter Password" required>
+                <input type="Password" class="input-field" id="confirmedPassword" title="Confirmed Password" placeholder="Confirmed Password" required>
+                <input type="submit" class="submit-button" id="submitButton" title="Submit your registration" value="Create an Account">
+                <div class="login-hyperlink">
+                    <label for="login-link">Already have an account?</label>
+                    <a href="login.html" id="reg-link">Login here</a>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
