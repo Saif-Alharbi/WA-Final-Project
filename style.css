@@ -4,8 +4,7 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
-.page{
-    height: 100vh;
+.body, html{
     background-color: #fff4d1;
     /* background-color: #bea248; */
 }
