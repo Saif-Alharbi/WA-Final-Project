@@ -4,9 +4,15 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+:root {
+    --primary-color: #fff4d1;
+    --secondary-color: #e3d8b3;
+    --font-color: #000000;
+    --font-color1: #815454;
+}
+
 .body, html{
-    background-color: #fff4d1;
-    /* background-color: #bea248; */
+    background-color: var(--primary-color);
 }
 .header{
     padding: 0px 2%;
@@ -33,16 +39,16 @@
     font-weight: 700;
     font-size: 1.25rem;
     text-decoration: none;
-    color: #000000;
+    color: var(--font-color);
 }
 .disabled-text{
     font-weight: 700;
     font-size: 1.25rem;
     text-decoration: none;
-    color: #815454;
+    color: var(--font-color1);
 }
 .header-text:hover{
-    color: #815454;
+    color: var(--font-color1);
     text-shadow: 0 0 0.05rem rgba(0, 0, 0, 0.75);
     transition: 200ms;
 }
@@ -60,7 +66,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.25);
     border-radius: 0 0 2rem 2rem;
 }
 .textover-images{
@@ -132,7 +138,7 @@
     max-width: 40%;
     margin: 8vh auto;
     overflow: hidden;
-    background-color: #e3d8b3;
+    background-color: var(--secondary-color);
     box-shadow: 0 0 3rem -0.75rem rgba(0, 0, 0, 0.20);
     border-radius: 1.8rem;
 } 
@@ -161,7 +167,7 @@
 .input-field::placeholder{
     text-align: center;
     font-size: 1rem;
-    color: #815454;
+    color: var(--font-color1);
 }
 .input-field:focus{
     box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.25);
@@ -175,17 +181,17 @@
     border: none;
     border-radius: 1rem;
     outline: none;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: var(--font-color);
+    color: var(--primary-color);
     text-transform: uppercase;
     cursor: pointer;
     font-size: 1rem; 
     font-weight: 700;
 }
 .submit-button:hover{
-    border:#000000 solid 0.15rem;
-    background-color: #fff4d1;
-    color: #000000;
+    border:var(--font-color) solid 0.15rem;
+    background-color: var(--primary-color);
+    color: var(--font-color);
     box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.25);
     transition: 250ms;
 }
@@ -195,11 +201,11 @@
 }
 .login-hyperlink a{
     text-decoration: none;
-    color: #815454;
+    color: var(--font-color1);
 }
 .login-hyperlink a:hover{
     text-decoration: none;
-    color: #000000;
+    color: var(--font-color);
     transition: 250ms;
 }
 
@@ -210,9 +216,10 @@
     max-width: 30%;
     margin: 8vh auto;
     overflow: hidden;
-    background-color: #e3d8b3;
+    background-color: var(--secondary-color);
     box-shadow: 0 0 3rem -0.75rem rgba(0, 0, 0, 0.20);
     border-radius: 1.8rem;
+    /* animation: page-load-animation 400ms ease-in; */
 } 
 .login-form h1{
     text-align: center;
@@ -235,11 +242,12 @@
     text-align: center;
     font-size: 1.1rem;
     background-color: rgba(255, 255, 255, 0.45);
+    /* animation: input-field-load-animation 600ms ease-in; */
 }
 .login-input-field::placeholder{
     text-align: center;
     font-size: 1rem;
-    color: #815454;
+    color: var(--font-color1);
 }
 .login-input-field:focus{
     box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.25);
@@ -262,6 +270,7 @@
 .checkbox-text{
     cursor: pointer;
     font-size: 1.1rem;
+    var(--font-color)
 }
 .login-button{
     margin-left: auto;
@@ -271,32 +280,53 @@
     border: none;
     border-radius: 1rem;
     outline: none;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: var(--font-color);
+    color: var(--primary-color);
     text-transform: uppercase;
     cursor: pointer;
     font-size: 1rem; 
     font-weight: 700;
 }
 .login-button:hover{
-    border:#000000 solid 0.15rem;
-    background-color: #fff4d1;
-    color: #000000;
+    border:var(--font-color) solid 0.15rem;
+    background-color: var(--primary-color);
+    color: var(--font-color);
     box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.25);
     transition: 250ms;
 }
 .reg-hyperlink{
     text-align: center;
     font-size: 1.1rem;
+    var(--font-color);
 }
 .reg-hyperlink a{
     text-decoration: none;
-    color: #815454;
+    color: var(--font-color1);
 }
 .reg-hyperlink a:hover{
     text-decoration: none;
-    color: #000000;
+    color: var(--font-color);
     transition: 250ms;
 }
 
 /* Login page style end */
+
+/* @keyframes page-load-animation {
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
+}
+@keyframes input-field-load-animation {
+    0%{
+        scale: 0;
+    }
+    50%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
+} */
