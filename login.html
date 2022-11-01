@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <div class="page">
@@ -27,7 +26,7 @@
         </nav>
         <div class="login-page">
             <form class="login-form">
-                <!-- FullName / UserName / Email / Password / Confirm Password -->
+                <!-- Email / Password -->
                 <h1>Login form</h1>
                 <input type="email" class="login-input-field" id="email" title="Email" placeholder="Enter Email" required autofocus>
                 <input type="Password" class="login-input-field" id="password" title="Password" placeholder="Enter Password" required>
@@ -35,7 +34,7 @@
                     <input type="checkbox" class="checkbox" id="rememberMe">
                     <label for="rememberMe" class="checkbox-text">Remember me</label>
                 </div>
-                <input type="submit" class="login-button hover-effect" id="submitButton" title="Submit your registration" value="Sign in">
+                <input type="submit" class="login-button hover-effect" id="submitButton" title="Sign in" value="Sign in">
                 <div class="hyperlink">
                     <label for="reg-link">Don't have an account?</label>
                     <a href="register.html" id="reg-link">Create here</a>
@@ -43,5 +42,7 @@
             </form>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

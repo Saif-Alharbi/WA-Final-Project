@@ -287,3 +287,7 @@
 }
 
 /* Login page style end */
+
+.input-field-error {
+    border: rgb(255, 0, 0) solid 2px;
+}
