@@ -16,27 +16,30 @@ function validateInput(elementId, min, max) {
     })
 }
 
-validateInput('fullName', 5, 24)
-validateInput('userName', 5, 16)
-validateInput('email', 8, 24)
-validateInput('password', 8, 16)
-//! bug with the code --------------------------------
-validateInput('loginEmail', 8, 24)
-validateInput('loginPassword', 8, 16)
+const checkLogin = document.getElementById('loginEmail')
+if(checkLogin){
+    validateInput('loginEmail', 8, 24)
+    validateInput('loginPassword', 8, 16)
+}
+const checkReg = document.getElementById('fullName')
+if(checkReg){
+    validateInput('fullName', 5, 24)
+    validateInput('userName', 5, 16)
+    validateInput('email', 8, 24)
+    validateInput('password', 8, 16)
+    const checkPassword = document.getElementById('confirmedPassword')
+    checkPassword.addEventListener('keyup', (handler) => {
+        const checkPasswordValue = checkPassword.value
+        const passwordValue = document.getElementById('password').value
+        const confirmedPasswordLabel = document.getElementById('confirmedPasswordError')
 
-const checkPassword = document.getElementById('confirmedPassword')
-checkPassword.addEventListener('keyup', (handler) => {
-    const checkPasswordValue = checkPassword.value
-    console.log("🚀 ~ file: script.js ~ line 31 ~ checkPassword.addEventListener ~ value", value)
-    const passwordValue = document.getElementById('password').value
-    console.log("🚀 ~ file: script.js ~ line 33 ~ checkPassword.addEventListener ~ value", value)
-    const confirmedPasswordLabel = document.getElementById('confirmedPasswordError')
+        !(checkPasswordValue === passwordValue)
+            ? confirmedPasswordLabel.classList.add('error-message-visible')
+            : confirmedPasswordLabel.classList.remove('error-message-visible')
 
-    !(checkPasswordValue === passwordValue)
-        ? confirmedPasswordLabel.classList.add('error-message-visible')
-        : confirmedPasswordLabel.classList.remove('error-message-visible')
+        confirmedPasswordLabel.classList.contains('error-message-visible')
+            ? submitBtn.disabled = true
+            : submitBtn.disabled = false
+    })
+}
 
-    confirmedPasswordLabel.classList.contains('error-message-visible')
-        ? regBtn.disabled = true
-        : regBtn.disabled = false
-})
