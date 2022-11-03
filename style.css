@@ -89,9 +89,9 @@
     scroll-behavior: smooth;
     box-shadow: 0 1.5rem 3rem -0.75rem rgba(0, 0, 0, 0.15);
     border-radius: 0 0 2rem 2rem;
-    border-right: 1px solid rgba(0, 0, 0, 0.25);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-    border-left: 1px solid rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: none;
+    
 }
 .slider-div img{
     margin-top: -20%;
@@ -134,7 +134,7 @@
 /* Home Page style end */
 
 .reg-page{
-    /* height: 70vh; */
+    height: fit-content;
     max-width: 40%;
     margin: 8vh auto;
     overflow: hidden;
@@ -145,7 +145,7 @@
 .reg-form h1{
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
 }
 .reg-form{
     width: 100%;
@@ -157,8 +157,8 @@
 }
 .input-field{
     width: 100%;
-    height: 7vh;
-    margin-bottom: 3vh;
+    height: 6vh;
+    margin-bottom: 1vh;
     border: none;
     border-radius: 1rem;
     outline: none;
@@ -176,11 +176,9 @@
     transition: 200ms;
 }
 .submit-button{
-    margin-left: auto;
-    margin-right: auto;
     width: 40%;
-    height: 7vh;
-    margin-bottom: 3vh;
+    height: 6vh;
+    margin: 2vh auto 2vh auto;
     border: none;
     border-radius: 1rem;
     outline: none;
@@ -198,9 +196,22 @@
     box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.25);
     transition: 250ms;
 }
+form div{
+    text-align: center;
+}
+.error-message{
+    color: red;
+    font-size: 0.9rem;
+    font-weight: bold;
+    visibility: hidden;
+}
+.error-message-visible{
+    visibility: visible;
+}
 /* Registration page style end */
 
 .login-page{
+    height: fit-content;
     max-width: 30%;
     margin: 8vh auto;
     overflow: hidden;
@@ -211,7 +222,7 @@
 .login-form h1{
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
 }
 .login-form{
     width: 100%;
@@ -223,8 +234,8 @@
 }
 .login-input-field{
     width: 100%;
-    height: 7vh;
-    margin-bottom: 3vh;
+    height: 6vh;
+    margin-bottom: 1vh;
     border: none;
     border-radius: 1rem;
     outline: none;
@@ -252,22 +263,20 @@
 .checkbox{
     width: 15px;
     height: 15px;
-    margin-bottom: 3vh;
+    margin: 1vh 0 1vh 0;
     cursor: pointer;
     accent-color: #000000;
 }
 .checkbox-text{
     cursor: pointer;
-    margin-bottom: 3vh;
+    margin: 1vh 0 1vh 0;
     font-size: 1.1rem;
     var(--font-color)
 }
 .login-button{
-    margin-left: auto;
-    margin-right: auto;
     width: 40%;
-    height: 7vh;
-    margin-bottom: 3vh;
+    height: 6vh;
+    margin: 1vh auto 2vh auto;
     border: none;
     border-radius: 1rem;
     outline: none;
