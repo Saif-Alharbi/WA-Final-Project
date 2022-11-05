@@ -125,8 +125,13 @@
 /* Slider style end */
 
 .paragraph-div{
-    padding: 0px 5%;
-    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+.paragraph-text{
+    font-size: 1rem;
 }
 
 /* Paragraph style end */
