@@ -295,7 +295,7 @@ form div{
 .hyperlink{
     text-align: center;
     font-size: 1.1rem;
-    var(--font-color);
+    color: var(--font-color);
 }
 .hyperlink a{
     text-decoration: none;
