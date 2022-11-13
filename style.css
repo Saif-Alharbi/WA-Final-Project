@@ -55,7 +55,7 @@
 
 /* Header style end */
 
-.modal {
+.modal{
     display: none; 
     position: fixed; 
     z-index: 2;  
@@ -64,25 +64,31 @@
     width: 100%; 
     height: 100%; 
     overflow: auto; 
-    background-color: rgba(0,0,0,0.4);
-}
-  
+    background-color: rgba(0,0,0,0.5);
+} 
 .modal-content {
-    background-color: #fefefe;
+    background-color: var(--secondary-color);
     display: flex;
     flex-direction: column;
     width: fit-content;
     height: fit-content;
     margin: 30vh auto;
     overflow: hidden;
-    background-color: var(--secondary-color);
     border-radius: 1.8rem;
+}
+.close-button {
+    color: #000000;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left:auto;
+    padding:1vh 1vw 0 1vw;
+    cursor: pointer;
 }
 .fb-fields{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding:0vh 2vw 2vh 2vw;
+    padding:0 35px 2vh 35px;
 }
 
 .feedback-label{
@@ -94,6 +100,8 @@
 .feedback-field{
     width: 100%;
     height: 10vh;
+    min-width: 15vw;
+    min-height: 4vh;
     margin-top: 1vh;
     border: none;
     border-radius: 1rem;
@@ -117,15 +125,6 @@
     cursor: pointer;
     font-size: 1rem; 
     font-weight: 700;
-}
-  
-.close-button {
-    color: #000000;
-    font-size: 28px;
-    font-weight: bold;
-    margin-left:auto;
-    padding:1vh 1vw 0 1vw;
-    cursor: pointer;
 }
 
 /* Modal style end */
@@ -211,7 +210,7 @@
 
 /* Paragraph style end */
 
-/* Home Page style end */
+/* ---------- Home Page style end ---------- */
 
 .reg-page{
     height: fit-content;
@@ -278,15 +277,6 @@
 }
 form div{
     text-align: center;
-}
-.error-message{
-    color: red;
-    font-size: 0.9rem;
-    font-weight: bold;
-    visibility: hidden;
-}
-.error-message-visible{
-    visibility: visible;
 }
 /* Registration page style end */
 
@@ -384,6 +374,15 @@ form div{
 
 /* Login page style end */
 
+.error-message{
+    color: red;
+    font-size: 0.9rem;
+    font-weight: bold;
+    visibility: hidden;
+}
+.error-message-visible{
+    visibility: visible;
+}
 .input-field-error {
     border: rgb(255, 0, 0) solid 2px;
 }

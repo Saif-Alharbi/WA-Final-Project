@@ -9,11 +9,9 @@ function validateInput(elementId, min, max) {
     elementValue.length < min || elementValue.length > max
       ? elementLabel.classList.add("error-message-visible")
       : elementLabel.classList.remove("error-message-visible");
-
     elementValue.length < min || elementValue.length > max
       ? element.classList.add("input-field-error")
       : element.classList.remove("input-field-error");
-
     elementLabel.classList.contains("error-message-visible")
       ? (submitBtn.disabled = true)
       : (submitBtn.disabled = false);
@@ -41,22 +39,20 @@ if (checkReg) {
 
     !(checkPasswordValue === passwordValue)
       ? confirmedPasswordLabel.classList.add("error-message-visible")
-      : confirmedPasswordLabel.classList.remove("error-message-visible");
-
+      : confirmedPasswordLabel.classList.remove("error-message-visible");    
     !(checkPasswordValue === passwordValue)
       ? checkPassword.classList.add("input-field-error")
-      : checkPassword.classList.remove("input-field-error");
-
+      : checkPassword.classList.remove("input-field-error")
     confirmedPasswordLabel.classList.contains("error-message-visible")
       ? (submitBtn.disabled = true)
       : (submitBtn.disabled = false);
   });
 }
-var modal = document.getElementById("feedback-modal");
-var btn = document.getElementById("add-feedback");
-var span = document.getElementById("close-btn");
+const modal = document.getElementById("feedback-modal");
+const btn = document.getElementById("add-feedback");
+const span = document.getElementById("close-btn");
 btn.onclick = function() {
-  modal.style.display = "block";
+  modal.style.display = "block"
 }
 span.onclick = function() {
   modal.style.display = "none";
