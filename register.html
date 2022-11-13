@@ -17,7 +17,7 @@
                 <img class="logo" src="images/logo.png" alt="Hotel logo" title="Home Page">
             </a>
             <div class="header-mid">
-                <li class="list"><a href="#" class="header-text">ADD FEEDBACK ENTRY</a></li>
+                <li class="list"><a href="#" class="header-text" id="add-feedback">ADD FEEDBACK ENTRY</a></li>
             </div>
             <div class="header-right">
                 <ul>
@@ -27,42 +27,44 @@
                 </ul>
             </div>
         </nav>
+        <div id="feedback-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" id="close-btn">&times;</span>
+                <form onsubmit="closeModal()">
+                    <div class="fb-fields">
+                        <label class="feedback-label">Write your feedback please</label>
+                        <textarea rows="5" cols="50" class="feedback-field" id="feedback-field" placeholder="Write here..." required autofocus></textarea>
+                        <input type="submit" class="feedback-submit-button hover-effect" id="feedback-submit" title="Submit your feedback" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
         <div class="reg-page">
             <form class="reg-form">
                 <!-- FullName / UserName / Email / Password / Confirm Password -->
                 <h1>Registration form</h1>
                 <div>
-                    <label for="fullName" class="error-message" id="fullNameError">Full name must be between 5 and 24
-                        characters</label>
-                    <input type="text" class="input-field" id="fullName" title="Full name" placeholder="Enter Full name"
-                        required autofocus>
+                    <label for="fullName" class="error-message" id="fullNameError">Full name must be between 5 and 24 characters</label>
+                    <input type="text" class="input-field" id="fullName" title="Full name" placeholder="Enter Full name" required autofocus>
                 </div>
                 <div>
-                    <label for="userName" class="error-message" id="userNameError">Username must be between 5 and 16
-                        characters</label>
-                    <input type="text" class="input-field" id="userName" title="Username" placeholder="Enter Username"
-                        required>
+                    <label for="userName" class="error-message" id="userNameError">Username must be between 5 and 16 characters</label>
+                    <input type="text" class="input-field" id="userName" title="Username" placeholder="Enter Username" required>
                 </div>
 
                 <div>
-                    <label for="email" class="error-message" id="emailError">Email must be between 8 and 24
-                        characters</label>
+                    <label for="email" class="error-message" id="emailError">Email must be between 8 and 24 characters</label>
                     <input type="email" class="input-field" id="email" title="Email" placeholder="Enter Email" required>
                 </div>
                 <div>
-                    <label for="password" class="error-message" id="passwordError">Password must be between 8 and 16
-                        characters</label>
-                    <input type="Password" class="input-field" id="password" title="Password"
-                        placeholder="Enter Password" required>
+                    <label for="password" class="error-message" id="passwordError">Password must be between 8 and 16 characters</label>
+                    <input type="Password" class="input-field" id="password" title="Password" placeholder="Enter Password" required>
                 </div>
                 <div>
-                    <label for="confirmedPassword" class="error-message" id="confirmedPasswordError">Must match
-                        password</label>
-                    <input type="Password" class="input-field" id="confirmedPassword" title="Confirmed Password"
-                        placeholder="Confirmed Password" required>
+                    <label for="confirmedPassword" class="error-message" id="confirmedPasswordError">Must match password</label>
+                    <input type="Password" class="input-field" id="confirmedPassword" title="Confirmed Password" placeholder="Confirmed Password" required>
                 </div>
-                <input type="submit" class="submit-button hover-effect" id="submitButton"
-                    title="Submit your registration" value="Create an Account" disabled>
+                <input type="submit" class="submit-button hover-effect" id="submitButton" title="Submit your registration" value="Create an Account" disabled>
                 <div class="hyperlink">
                     <label for="login-link">Already have an account?</label>
                     <a href="login.html" id="reg-link">Login here</a>

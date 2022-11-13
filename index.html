@@ -17,7 +17,7 @@
                 <img class="logo" src="images/logo.png" alt="Hotel logo" title="Home Page">
             </a>
             <div class="header-mid">
-                <li class="list"><a href="#" class="header-text">ADD FEEDBACK ENTRY</a></li>
+                <li class="list"><a href="#" class="header-text" id="add-feedback">ADD FEEDBACK ENTRY</a></li>
             </div>
             <div class="header-right">
                 <ul>
@@ -26,6 +26,18 @@
                 </ul>
             </div>
         </nav>
+        <div id="feedback-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" id="close-btn">&times;</span>
+                <form onsubmit="closeModal()">
+                    <div class="fb-fields">
+                        <label class="feedback-label">Write your feedback please</label>
+                        <textarea rows="5" cols="50" class="feedback-field" id="feedback-field" placeholder="Write here..." required autofocus></textarea>
+                        <input type="submit" class="feedback-submit-button hover-effect" id="feedback-submit" title="Submit your feedback" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
         <div class="slideshow">
             <div class="black-dim">
                 <div class="textover-images">
@@ -48,9 +60,9 @@
         </div>
         <div class="paragraph-div">
             <h1 class="paragraph-title">Reach us</h1>
-            <p class="paragraph-text">Saif Hassan Alharbi 439009961</p>
-            <p class="paragraph-text">Abdulmajeed 439009961</p>
-            <p class="paragraph-text">Anas 439009961</p>
+            <p class="paragraph-text">Saif Hassan Alharbi - ID:439009961 - Email: s439009961@st.uqu.edu.sa</p>
+            <p class="paragraph-text">Abdulmajeed Bandar balelah - ID:441012474 - Email: s441012474@st.uqu.edu.sa</p>
+            <p class="paragraph-text">Anas Ahmad Hameed Alhasani - ID:441001648 - Email: s441001648@st.uqu.edu.sa</p>
         </div>
     </div>
 

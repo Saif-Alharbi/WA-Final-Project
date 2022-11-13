@@ -17,7 +17,7 @@
                 <img class="logo" src="images/logo.png" alt="Hotel logo" title="Home Page">
             </a>
             <div class="header-mid">
-                <li class="list"><a href="#" class="header-text">ADD FEEDBACK ENTRY</a></li>
+                <li class="list"><a href="#" class="header-text" id="add-feedback">ADD FEEDBACK ENTRY</a></li>
             </div>
             <div class="header-right">
                 <ul>
@@ -26,6 +26,18 @@
                 </ul>
             </div>
         </nav>
+        <div id="feedback-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" id="close-btn">&times;</span>
+                <form onsubmit="closeModal()">
+                    <div class="fb-fields">
+                        <label class="feedback-label">Write your feedback please</label>
+                        <textarea rows="5" cols="50" class="feedback-field" id="feedback-field" placeholder="Write here..." required autofocus></textarea>
+                        <input type="submit" class="feedback-submit-button hover-effect" id="feedback-submit" title="Submit your feedback" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
         <div class="login-page">
             <form class="login-form">
                 <!-- Email / Password -->
@@ -36,10 +48,8 @@
                         placeholder="Enter Email" required autofocus>
                 </div>
                 <div>
-                    <label for="loginPassword" class="error-message" id="loginPasswordError">Password must be
-                        filled</label>
-                    <input type="Password" class="login-input-field" id="loginPassword" title="Password"
-                        placeholder="Enter Password" required>
+                    <label for="loginPassword" class="error-message" id="loginPasswordError">Password must be filled</label>
+                    <input type="Password" class="login-input-field" id="loginPassword" title="Password" placeholder="Enter Password" required>
                 </div>
                 <div class="checkbox-div">
                     <input type="checkbox" class="checkbox" id="rememberMe">

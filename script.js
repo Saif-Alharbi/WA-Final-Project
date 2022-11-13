@@ -52,3 +52,21 @@ if (checkReg) {
       : (submitBtn.disabled = false);
   });
 }
+var modal = document.getElementById("feedback-modal");
+var btn = document.getElementById("add-feedback");
+var span = document.getElementById("close-btn");
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+function closeModal() {
+  modal.style.display = "none";
+  document.getElementById("feedback-field").value="";
+}
